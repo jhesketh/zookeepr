@@ -1,0 +1,38 @@
+<metal:main metal:define-macro="master">
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xml:lang="en" xmlns:tal="http://xml.zope.org/namespaces/tal">
+<head>
+  <title>zookeepr admin</title>
+  <meta charset="utf-8"/>
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
+  <script type="text/javascript" metal:define-slot="javascript"></script>
+  <link metal:define-slot="css"></link>
+  <style>body {padding-top:60px}</style>
+</head>
+<body>
+
+  <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container-fluid" data-dropdown="dropdown">
+          <a class="brand" href="${request.application_url}">zookeepr administration</a>
+          <ul class="nav">
+            <li><a href="${request.application_url}">Back to application</a></li>
+            <li><a href="${request.application_url}/admin">Models</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid">
+      <div class="row-fluid">
+        <div class="span12">
+            <metal:main metal:define-slot="body"/>
+            <footer>
+               <p>&copy; Your company 2011</p>
+            </footer>
+        </div>
+      </div>
+    </div> <!-- /container -->
+</body>
+</html>
+</metal:main>

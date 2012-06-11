@@ -1,4 +1,4 @@
-[app:main]
+[app:zk]
 use = egg:zk
 
 pyramid.reload_templates = true
@@ -24,6 +24,16 @@ authkit.cookie.signoutpath = /person/signout
 authkit.setup.intercept = 401, 403
 authkit.cookie_enforce = True
 
+[filter:fanstatic]
+use = egg:fanstatic#fanstatic
+debug = true
+base_url = /static
+
+[pipeline:main]
+pipeline =
+    egg:WebError#evalerror
+    fanstatic
+    zk
 
 [server:main]
 use = egg:waitress#main

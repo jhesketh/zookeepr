@@ -19,6 +19,8 @@ requires = [
     "pydns",
     "psycopg2",
     "PIL",
+    #### Required for fa.bootstrap
+        'fa.bootstrap',
     #### LEGACY (zkpylon) requirements:
     "pylons",
     "AuthKit>=0.4.0",
@@ -49,5 +51,6 @@ setup(name='zk',
       [paste.app_factory]
       main = zk:main
       """,
+      paster_plugins=['pyramid'],
       )
 
