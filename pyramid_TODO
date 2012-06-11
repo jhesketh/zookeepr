@@ -1,0 +1,16 @@
+Items to do/consider in pyramid port
+
+
+- example controller to document port
+    - formalchemy processing
+    - no duplication on model/view validation
+    - pyramid_formalchemy (aka admin interface) integration
+    - inheritance from a base crud class
+- Authentication system
+    - Either new and limit interoperability in the port
+    - or re-implement authKit for compatability with zkpylons (although may be outdated)
+    - figure out a way for legacy to share a session(id)
+- Templates/Theme inheritance similar to legacy zkpylons
+    - New templating engine
+    - Focus on neat, consistent templates
+    - Reduce repetition in form generation and error reporting
